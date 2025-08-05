@@ -4,7 +4,6 @@ import (
 	"context"
 	"errors"
 	"fmt"
-	"log"
 	"os"
 	"path/filepath"
 	"sort"
@@ -75,7 +74,6 @@ func failstats() cli.Command {
 			if err != nil {
 				return fmt.Errorf("error getting revision info: %w", err)
 			}
-			log.Print("infos", infos)
 
 			versions := make(map[string]int)
 			variants := make(map[string]int)
